@@ -1,0 +1,168 @@
+@import url("~butterfly-dag/pack/index.css");
+.butterfly-layout {
+  width: 100%;
+  height: 100%;
+}
+.pipeline-label {
+  position: absolute;
+  background: #fff;
+  border-radius: 10px;
+  padding: 0 12px;
+}
+
+.pipeline-base-node {
+  position: absolute;
+  height: 32px;
+  min-width: 80px;
+  line-height: 32px;
+  text-align: center;
+  background: #fff;
+  border-radius: 51px;
+  // border: 1px solid #d9d9d9;
+  box-shadow: 0 0px 4px rgba(75, 163, 234, 0.97);
+  transition: box-shadow 0.5s linear;
+  &.focus {
+    box-shadow: 0 0px 4px rgba(75, 163, 234, 0.97),
+      0 0px 8px rgba(7, 132, 234, 0.97), 0 0px 16px rgba(7, 132, 234, 0.5);
+    // border: 1px solid rgba(75, 163, 234, 0.97);
+  }
+  .icon-box {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    width: 32px;
+    border-radius: 16px;
+    position: relative;
+    left: 0px;
+    .iconfont {
+      color: #fff;
+    }
+  }
+  .text-box {
+    display: inline-block;
+    height: 32px;
+    min-width: 50px;
+    padding: 0 10px;
+    line-height: 32px;
+    font-size: 14px;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@keyframes run {
+  from {
+    stroke-dashoffset: 15;
+  }
+  to {
+    stroke-dashoffset: 5;
+  }
+}
+
+.color(@theme,@color) {
+  .@{theme},
+  .path-bg-@{theme} {
+    background: @color;
+    color: #fff;
+  }
+  .path-arrow-@{theme} {
+    fill: @color;
+    stroke: @color;
+  }
+  .path-link-@{theme} {
+    // fill: @color;
+    stroke: @color;
+    stroke-dasharray: 5;
+    animation: run 1s linear infinite;
+  }
+}
+.color(green, #73d13d);
+.color(simple-blue, #40a9ff);
+.color(deep-blue, #597ef7);
+.color(orange, #ffa940);
+.color(deep-green, #36cfc9);
+.color(simple-yellow, #ffc53d);
+.color(deep-green, #36cfc9);
+.color(purple, #9254de);
+.color(pink, #f759ab);
+.color(gray, #909090);
+
+.pipeline-group {
+  width: 100%;
+  height: 240px;
+  position: absolute;
+  border: 2px solid #4c5f82;
+  border-radius: 5px;
+  background: #4c5f82;
+  transition: border-color 0.5s linear;
+  &.small {
+    width: 350px;
+    height: 200px;
+  }
+  &.active {
+    border: 2px solid #57bdb4;
+  }
+  .pipeline-group-container {
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+  }
+  .text {
+    position: absolute;
+    top: 3px;
+    left: 18px;
+    font-size: 20px;
+    color: #16c7da;
+  }
+}
+
+.butterflies-link,
+.path-link-default {
+  fill: none;
+  stroke: #16c7da;
+  stroke-width: 1px;
+}
+.butterflies-arrow,
+.path-arrow-default {
+  fill: #16c7da;
+  stroke: #16c7da;
+  stroke-width: 1px;
+}
+.group {
+  width: 100%;
+}
+.butterfly-wrapper .group .title {
+  box-sizing: border-box;
+  background-color: rgba(0, 23, 103, 0.6);
+}
+* {
+  box-sizing: border-box;
+}
+.logo-toolbar {
+  position: absolute;
+  top: -35px;
+  left: 0;
+  width: 100%;
+  display: none;
+  &.show {
+    display: block;
+  }
+  .box-container {
+    display: flex;
+    justify-content: space-evenly;
+    .box {
+      width: 32px;
+      height: 32px;
+      display: inline-block;
+      text-align: center;
+      line-height: 32px;
+      background: #fff;
+      box-shadow: 0 2px 3px 0 rgba(0, 112, 204, 0.06);
+      border-radius: 16px;
+      color: #000;
+      &:hover {
+        color: #40a9ff;
+      }
+    }
+  }
+}

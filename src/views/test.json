@@ -1,0 +1,32 @@
+{
+  "workflow": {
+    "paramsters": [],
+    "statue": {}
+  },
+  "nodes": [
+    {
+      "id": "build",
+      "label": "构建镜像",
+      "bgColor": "simple-yellow",
+      "iconClass": "orange",
+      "iconType": "icon-guanlian",
+      "group": "group", // 所属群组
+      "parents": [],
+      "pipeline": {
+        // pipeline 信息
+        "statue": "",
+        "templateRef": {},
+        "runTime": "",
+        "inputs": {},
+        "outputs": {}
+      }
+    }
+  ],
+  "groups": [
+    {
+      "id": "groupId",
+      "name": "groupName",
+      "status": {}
+    }
+  ]
+}
