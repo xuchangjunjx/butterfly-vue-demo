@@ -1,7 +1,7 @@
-import { Node } from "butterfly-dag/pack/index.js";
+import dag from "butterfly-dag";
 import $ from "jquery";
 
-class BaseNode extends Node {
+class BaseNode extends dag.Node {
   constructor(opts) {
     super(opts);
     this.options = opts;

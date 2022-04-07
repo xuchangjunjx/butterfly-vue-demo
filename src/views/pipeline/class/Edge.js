@@ -1,4 +1,4 @@
-import { Edge } from "butterfly-dag/pack/index.js";
+import { Edge } from "butterfly-dag";
 import $ from "jquery";
 
 class BaseEdge extends Edge {

@@ -13,7 +13,7 @@ export class MyNode {
     this.id = randomString(5);
     this.label = label + this.id;
     this.Class = Node;
-    this.group = group;
+    // this.group = group;
     this.className = className;
     this.endpoints = endpoints();
   }

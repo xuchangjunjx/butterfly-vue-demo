@@ -19,13 +19,11 @@ export default {
   methods: {
     init,
     redraw() {
-      this.instance.drageReDraw({
-        rankdir: "RB",
-        align: "DR",
-        nodesep: 30,
-        ranksep: 40,
-        controlPoints: false
-      });
+      console.log(this.instance);
+      this.instance.autoLayout(
+        this.instance.layout.type,
+        this.instance.layout.options
+      );
     }
   },
   mounted() {

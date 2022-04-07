@@ -1,4 +1,4 @@
-import { Group } from "butterfly-dag/pack/index.js";
+import { Group } from "butterfly-dag";
 const $ = require("jquery");
 const _ = require("lodash");
 

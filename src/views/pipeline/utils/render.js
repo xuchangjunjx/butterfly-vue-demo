@@ -1,6 +1,7 @@
-// import { Canvas } from "butterfly-dag/pack/index.js";
+import dag from "butterfly-dag";
 import pipelineEvents from "./events";
-import Canvas from "../class/DragCanvas.js";
+// import Canvas from "../class/DragCanvas.js";
+const { Canvas } = dag;
 export default function(flowData) {
   let root = document.getElementById("canvas");
   let canvas = new Canvas({
@@ -10,28 +11,29 @@ export default function(flowData) {
     draggable: true, // 可拖动
     zoomable: true, // 可放大
     moveable: true, // 可平移
-    autoFixCanvas: {
-      //节点拖动或连线拖动到画布边缘时，画布自动延展
-      enable: true,
-      autoMovePadding: [20, 20, 20, 20] //触发自动延展的画布内边距
-    },
+    // autoFixCanvas: {
+    //节点拖动或连线拖动到画布边缘时，画布自动延展
+    // enable: true,
+    // autoMovePadding: [20, 20, 20, 20] //触发自动延展的画布内边距
+    // },
     layout: {
-      type: "drageLayout",
+      type: "dagreLayout",
       options: {
+        nodeSize: [108, 32],
         rankdir: "LR",
-        align: "DR",
-        nodesep: 6,
-        ranksep: 31,
+        align: "DL",
+        nodesep: 8,
+        ranksep: 16,
         controlPoints: false
       }
-    },
-    theme: {
-      edge: {
-        type: "Manhattan",
-        arrow: true,
-        arrowPosition: 1
-      }
     }
+    // theme: {
+    //   edge: {
+    //     type: "Manhattan",
+    //     arrow: true,
+    //     arrowPosition: 1
+    //   }
+    // }
   });
   canvas.draw(flowData);
   canvas.on("events", data => {

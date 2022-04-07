@@ -11,7 +11,7 @@ export default {
       bgColor: "simple-blue",
       iconType: "icon-kaifa",
 
-      group: "group",
+      // group: "group",
       Class: Node,
       endpoints: endpoints("begin")
     },
@@ -23,7 +23,7 @@ export default {
       iconClass: "orange",
       iconType: "icon-guanlian",
 
-      group: "group",
+      // group: "group",
       Class: Node,
       endpoints: endpoints("build")
     }
@@ -36,11 +36,11 @@ export default {
       targetNode: "build",
       arrow: true,
       type: "endpoint",
-      arrowPosition: 0.5
+      arrowPosition: 0.4
       // Class: Edge
     }
   ],
-  groups: [
+  groups1: [
     {
       id: "group",
       options: {

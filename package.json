@@ -8,8 +8,10 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "butterfly-dag": "^2.8.32",
+    "butterfly-dag": "^4.2.1",
     "core-js": "^3.6.5",
+    "d3-dag": "^0.10.0",
+    "d3-hierarchy": "^3.1.1",
     "jquery": "^3.5.1",
     "lodash": "^4.17.20",
     "randomstring": "^1.1.5",

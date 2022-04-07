@@ -14,6 +14,7 @@
 // @ is an alias to /src
 import mockData from "./data.js";
 import pipeline from "./pipeline/index.vue";
+import hierarchy from "./pipeline/utils/hierarchy";
 export default {
   components: {
     pipeline
@@ -26,6 +27,7 @@ export default {
   },
   methods: {
     reDraw() {
+      hierarchy.stratify();
       this.$refs.canvas.redraw();
     }
   }

@@ -1,4 +1,4 @@
-import { Layout, Canvas } from "butterfly-dag/pack/index.js";
+import { Layout, Canvas } from "butterfly-dag";
 import _ from "lodash";
 class DrageCanvas extends Canvas {
   constructor(options) {
